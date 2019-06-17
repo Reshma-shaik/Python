@@ -1,0 +1,9 @@
+ip=input("Enter the string:")
+ct=ip.count(' ')
+ip=ip.replace(' ','')
+if ct==0:
+    print("Given string doesn't have spaces")
+else:
+    ip1= '"'+' '*ct+ip+'"'
+    print(ip1)
+
