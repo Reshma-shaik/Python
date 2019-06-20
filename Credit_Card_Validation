@@ -1,0 +1,26 @@
+n=input()
+f=0
+if(len(n)==19 and n.count('-')==3 and (n[4]=='-' and n[9]=='-' and n[14]=='-')) or len(n)==16:
+    f=f+1
+    if n.startswith('4') or n.startswith('5') or n.startswith('6'):
+        f=f+1
+        n=n.replace('-','')
+        if n.isdigit():
+            f = f + 1
+            for i in range(len(n)):
+                ct=0
+                ct1=0
+                j = i
+                while ct1<4 & j<len(n):
+                    if n[i]==n[j]:
+                        ct=ct+1
+                    j=j+1
+                    ct1=ct1+1
+                if ct>=4:
+                    break
+            if ct<4:
+                f = f + 1
+if f==4:
+    print(n, ":VALID")
+else:
+    print(n,":NOT VALID")
