@@ -13,4 +13,4 @@ turtle.speed("fastest")
 
 for _ in range(int(360/10)):
     turtle.circle(100)
-    turtle.setheading(_*10)
+    turtle.setheading(turtle.heading()+10)
